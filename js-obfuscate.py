@@ -46,9 +46,9 @@ def gas(command):
 		r = post(u,headers=hdr,data=data)
 		js_encoded = re.search(r"\>(.*?)\n<\/textarea>",r.text).group(1)
 		o = html.unescape(js_encoded).strip()
-		p = open("js.html","r").read().replace("%%jscode%%",o)
+		#p = open("js.html","r").read().replace("%%jscode%%",o)
 		x = open(input("nama: ")+".html","w")
-		x.write(p)
+		x.write(o)
 		x.close()
 	else:
 		print("command:\n* -i : input\n* -f file")
