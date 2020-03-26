@@ -47,7 +47,7 @@ def gas(command):
 		js_encoded = re.search(r"\>(.*?)\n<\/textarea>",r.text).group(1)
 		o = html.unescape(js_encoded).strip()
 		#p = open("js.html","r").read().replace("%%jscode%%",o)
-		x = open(input("nama: ")+".html","w")
+		x = open(input("nama: ")+".js","w")
 		x.write(o)
 		x.close()
 	else:
